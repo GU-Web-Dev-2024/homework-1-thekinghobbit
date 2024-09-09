@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Leif Forrest CPSC332</title>
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Butcherman+Caps" />
-</head>
+    <head>
+        <title>Leif Forrest CPSC332</title>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Butcherman+Caps" />
+    </head>
 <body>
+    <img src="./danger.webp" style="box-shadow: none;position: absolute; max-height: 200px;bottom:0">
     <style>
         body {
             background-image: linear-gradient(to top right, rgb(151, 6, 6),rgb(212, 255, 0),rgb(123, 87, 43),rgb(63, 178, 63),rgb(29, 150, 13),indigo,violet);
@@ -12,6 +13,7 @@
             text-shadow: 5px 5px red;
             background-size: cover;
             background-attachment: fixed;
+            outline: 15px pink;
 
         
         }
@@ -19,15 +21,21 @@
             width: 100%; 
             height: 50vh;
             box-shadow: 40px 40px  rgb(1, 74, 44);
+            outline: 15px pink;
+
 
         }
         h1{
             text-align: center;
             font-size: 5em;
+            outline: 15px pink;
+
         }
         p{
             text-align: center;
             font-size: 3em;
+            outline: 15px pink;
+
         }
         a{
             text-align: center;
@@ -39,6 +47,8 @@
             text-shadow: 10px 10px blue;
             color: rgb(255, 0, 153);
             text-shadow: 10px;
+            outline: 15px pink;
+
             /* font-family: papyrus; */
         }
         button{
@@ -47,8 +57,13 @@
             margin-right: auto;
             font-size: 2em;
             padding: 10px;
-            background-color: red;
+            background-color: rgb(0, 0, 0);
+            background-image: url('./fire.png');
+            background-image: ;
+            background-position: center;
             text-shadow: 5px 5px blue;
+            outline: 15px pink;
+
 
         }
         /* (A) BACKGROUND */
@@ -84,12 +99,14 @@
         input{
             font-size: 2em;
             padding: 10px;
-            background-color: red;
+            /* background-color: red; */
+            background-image: url('./image.jpg');
             text-shadow: 5px 5px blue;
+            background-position: center;
         }
     </style>
-    <h1>This is a HW1 Submission!</h1>
-
+    <h1>This is a    H W 1    Submission!<img src="./warning.gif" style="min-height: 50px; max-height: 200px; min-width: 100px; max-width: 200px;padding-left: 80px;"></h1>
+    <div style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 5em; color: red; text-shadow: none; background-color: gray;">WARNING SYSTEM CRASH IMMINENT - <span id="timer"></span></div>
     <p>I hope to gain the <em>software</em> development concentration <strong>requirment</strong>.</p>
     <!-- (A) HTML DIALOG BOX -->
     <div id="boxBack"><div id="boxWrap">
@@ -97,10 +114,28 @@
             <input type="button" value="DONT COME BACK!!!!!" onclick="doFunction()">
         </div>
     </div>
-    <button onclick="dbox('');">Don't Click this button</button>
+    <button onclick="dbox('');"> Don't Click this button</button>
+    <img src="./warn.gif" style="max-width: 300px; max-height: 100px;">
     <img src="wiz.jpg">
     <a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F063%2F641%2F961%2Flarge%2Flodorigo-img-6684.jpg%3F1686020285&f=1&nofb=1&ipt=335232dca8c2a9b8b3e716e41cef16009f939f0c8bdfb83a4174e2337f580358&ipo=images">found here</a>
+    
 <script>
+    // timer from https://codepen.io/Apollothegodguy/pen/QOONXG
+    function startTimer(){
+        var e=document.getElementById("timer").innerHTML.split(/[:]+/),
+        t=e[0]
+        if(document.getElementById("timer").innerHTML == "0:00"){
+            alert("Your computer has crashed due to unforseen circumstances. Please contact +1 212 243 5700 for assistance.");
+            window.close(); 
+        }
+        n=checkSecond(e[1]-1);0==n&&(t-=0),
+        timer=startTimer,
+        document.getElementById("timer").innerHTML=t+":"+n,
+        // console.log(document.getElementById("timer").innerHTML)
+        setTimeout(startTimer,1e3)
+
+
+    }function checkSecond(e){return e<10&&e>=0&&(e="0"+e),e<0&&(e="59"),e}document.getElementById("timer").innerHTML="2:30",startTimer();
     function doFunction(){
         // alert("I told you not to click it. >:(");
         window.close() ;
