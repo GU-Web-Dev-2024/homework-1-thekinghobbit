@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leif Forrest CPSC332</title>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Butcherman+Caps" />
+</head>
+<body>
+    <style>
+        body {
+            background-image: linear-gradient(to top right, rgb(151, 6, 6),rgb(212, 255, 0),rgb(123, 87, 43),rgb(63, 178, 63),rgb(29, 150, 13),indigo,violet);
+            font-family: "Butcherman Caps";
+            text-shadow: 5px 5px red;
+            background-size: cover;
+            background-attachment: fixed;
+
+        
+        }
+        img{
+            width: 100%; 
+            height: 50vh;
+            box-shadow: 40px 40px  rgb(1, 74, 44);
+
+        }
+        h1{
+            text-align: center;
+            font-size: 5em;
+        }
+        p{
+            text-align: center;
+            font-size: 3em;
+        }
+        a{
+            text-align: center;
+            font-size: 4em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-decoration:overline;
+            text-shadow: 10px 10px blue;
+            color: rgb(255, 0, 153);
+            text-shadow: 10px;
+            /* font-family: papyrus; */
+        }
+        button{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 2em;
+            padding: 10px;
+            background-color: red;
+            text-shadow: 5px 5px blue;
+
+        }
+        /* (A) BACKGROUND */
+        #boxBack {
+            /* (A1) FULLSCREEN + CENTERED */
+            position: fixed; z-index: 999;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            align-items: center; justify-content: center;
+        
+            /* (A2) TRANSPARENT BACKGROUND + HIDDEN */
+            display: none;
+        }
+        
+        /* (A3) ADD THIS CSS CLASS TO SHOW */
+        #boxBack.show { display: flex; }
+        
+        /* (B) DIALOG BOX */
+        #boxWrap {
+            min-width: 800px; max-width: 800px;
+            min-height: 800px;
+            padding: 10px;
+            font-size: 3em;
+            background: url('/banana.png') no-repeat center center;
+            background-size: 100% 100%;
+            display: grid;
+            place-items: center; 
+            
+        }
+        #boxTxt {
+            min-width: 300px;
+        }
+        input{
+            font-size: 2em;
+            padding: 10px;
+            background-color: red;
+            text-shadow: 5px 5px blue;
+        }
+    </style>
+    <h1>This is a HW1 Submission!</h1>
+
+    <p>I hope to gain the <em>software</em> development concentration <strong>requirment</strong>.</p>
+    <!-- (A) HTML DIALOG BOX -->
+    <div id="boxBack"><div id="boxWrap">
+        <div id="boxTxt"></div>
+            <input type="button" value="DONT COME BACK!!!!!" onclick="doFunction()">
+        </div>
+    </div>
+    <button onclick="dbox('');">Don't Click this button</button>
+    <img src="wiz.jpg">
+    <a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdnb.artstation.com%2Fp%2Fassets%2Fimages%2Fimages%2F063%2F641%2F961%2Flarge%2Flodorigo-img-6684.jpg%3F1686020285&f=1&nofb=1&ipt=335232dca8c2a9b8b3e716e41cef16009f939f0c8bdfb83a4174e2337f580358&ipo=images">found here</a>
+<script>
+    function doFunction(){
+        // alert("I told you not to click it. >:(");
+        window.close() ;
+
+    }
+    function dbox (msg) {
+        if (msg != undefined) {
+            document.getElementById("boxTxt").innerHTML = msg;
+            document.getElementById("boxBack").classList.add("show");
+        } else { document.getElementById("boxBack").classList.remove("show"); }
+        
+    }   
+</script>
+</body>
+</html>
