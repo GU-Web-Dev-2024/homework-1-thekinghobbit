@@ -59,7 +59,6 @@
             padding: 10px;
             background-color: rgb(0, 0, 0);
             background-image: url('./fire.png');
-            background-image: ;
             background-position: center;
             text-shadow: 5px 5px blue;
             outline: 15px pink;
@@ -129,16 +128,14 @@
             alert("Your computer has crashed due to unforseen circumstances. Please contact +1 212 243 5700 for assistance.");
             window.close(); 
         }
-        else{
-            
-            n=checkSecond(e[1]-1);0==n&&(t-=0),
-            timer=startTimer,
-            document.getElementById("timer").innerHTML=t+":"+n,
-            // console.log(document.getElementById("timer").innerHTML)
-            setTimeout(startTimer,1e3)
-        }
+        n=checkSecond(e[1]-1);0==n&&(t-=0),
+        timer=startTimer,
+        document.getElementById("timer").innerHTML=t+":"+n,
+        // console.log(document.getElementById("timer").innerHTML)
+        setTimeout(startTimer,1e3)
+        
 
-    }function checkSecond(e){return e<10&&e>=0&&(e="0"+e),e<0&&(e="59"),e}document.getElementById("timer").innerHTML="2:30",startTimer();
+    }function checkSecond(e){return e<10&&e>=0&&(e="0"+e),e<0&&(e="59"),e}document.getElementById("timer").innerHTML="0:10",startTimer();
     function doFunction(){
         // alert("I told you not to click it. >:(");
         window.close() ;
